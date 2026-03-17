@@ -111,6 +111,11 @@
     .case-images img.portrait { object-position: center 20%; }
     .case-images img.bottom { object-position: center bottom; }
     .case-links { display: flex; flex-direction: column; gap: 8px; }
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 0.75rem; }
+    .result-card { background: var(--gray-100); padding: 1.5rem; display: flex; flex-direction: column; gap: 6px; }
+    .result-number { font-family: var(--serif); font-size: 2.5rem; font-weight: 400; line-height: 1; color: var(--black); letter-spacing: -0.02em; }
+    .result-label { font-size: 0.8125rem; color: var(--gray-700); line-height: 1.4; }
+    .result-context { font-size: 0.75rem; color: var(--gray-500); }
     .case-link-item { display: flex; align-items: center; gap: 12px; padding: 1rem 1.25rem; border: 1px solid var(--gray-200); transition: border-color 0.2s, background 0.2s; }
     .case-link-item:hover { border-color: var(--black); background: var(--gray-100); }
     .case-link-label { font-size: 0.9375rem; color: var(--black); flex: 1; }
@@ -388,6 +393,21 @@
             </div>
           </div>
           <div>
+            <p class="case-section-title">Results</p>
+            <div class="results-grid">
+              <div class="result-card">
+                <span class="result-number">+189%</span>
+                <span class="result-label">average monthly reach after joining</span>
+              </div>
+              <div class="result-card">
+                <span class="result-number">3×</span>
+                <span class="result-label">increase in monthly post volume</span>
+              </div>
+            </div>
+            <p class="result-context">Instagram, Jun–Dec 2024. First 6 months.</p>
+          </div>
+
+          <div>
             <p class="case-section-title">Images</p>
             <div class="case-images">
               <img src="ritoverso-209.jpg" alt="Geovana at Riot Games / CCXP event" class="portrait" />
@@ -483,6 +503,20 @@
             </div>
           </div>
           <div>
+            <p class="case-section-title">Results</p>
+            <div class="results-grid">
+              <div class="result-card">
+                <span class="result-number">30+</span>
+                <span class="result-label">keywords ranking #1 on Google in one year</span>
+              </div>
+              <div class="result-card">
+                <span class="result-number">+25%</span>
+                <span class="result-label">Instagram follower growth in 6 months</span>
+              </div>
+            </div>
+            <p class="result-context">SEO and social media strategy, 2022–2024.</p>
+          </div>
+          <div>
             <p class="case-section-title">Links</p>
             <div class="case-links">
               <a class="case-link-item" href="https://www.unileverfoodsolutions.com.br/dicas-e-servicos/seu-negocio/tipos-de-mise-en-place.html" target="_blank"><span class="case-link-label">Article: Mise en place types</span><span class="case-link-arrow">↗</span></a>
@@ -521,6 +555,16 @@
               <p>The strategy was to use educational content with a playful approach, leaning into cultural moments to make the brand feel present and human. In September, we tied the Rock in Rio season to gut health messaging — content that felt spontaneous and culturally aware rather than brand-pushed.</p>
               <p>The approach worked because it respected the audience's intelligence: people interested in gut health are also people living cultural moments. The brand didn't need to fake relevance — it just needed to show up in the right context with the right tone.</p>
             </div>
+          </div>
+          <div>
+            <p class="case-section-title">Results</p>
+            <div class="results-grid">
+              <div class="result-card">
+                <span class="result-number">3 → LATAM</span>
+                <span class="result-label">pilot renewed with expanded Latin America scope</span>
+              </div>
+            </div>
+            <p class="result-context">3-month pilot contract. Renewed due to client satisfaction with broader regional scope.</p>
           </div>
           <div>
             <p class="case-section-title">Content</p>
