@@ -25,17 +25,20 @@
     a { color: inherit; text-decoration: none; }
     .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
 
+    /* NAV */
     nav { padding: 1.5rem 0; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; background: var(--white); z-index: 100; }
     .nav-inner { display: flex; justify-content: space-between; align-items: center; }
     .nav-name { font-family: var(--serif); font-size: 1.0625rem; cursor: pointer; transition: opacity 0.2s; }
     .nav-name:hover { opacity: 0.6; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.8125rem; color: var(--gray-500); letter-spacing: 0.04em; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--black); }
+    .nav-links button { background: none; border: none; font-family: var(--sans); font-size: 0.8125rem; color: var(--gray-500); letter-spacing: 0.04em; cursor: pointer; transition: color 0.2s; padding: 0; }
+    .nav-links button:hover { color: var(--black); }
 
+    /* PAGES */
     .page { display: none; }
     .page.active { display: block; }
 
+    /* HERO */
     .hero { padding: 6rem 0 5rem; border-bottom: 1px solid var(--gray-200); }
     .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 2.5rem; }
     .hero-headline { font-family: var(--serif); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; color: var(--black); margin-bottom: 2.5rem; }
@@ -45,6 +48,7 @@
     .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { font-size: 0.75rem; padding: 5px 14px; border: 1px solid var(--gray-200); border-radius: 20px; color: var(--gray-700); }
 
+    /* CASES LIST */
     .section-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-500); padding: 3rem 0 2rem; }
     .cases { border-top: 1px solid var(--gray-200); }
     .case-row { display: grid; grid-template-columns: 220px 1fr auto; gap: 2rem; padding: 2.5rem 0; border-bottom: 1px solid var(--gray-200); align-items: start; cursor: pointer; transition: opacity 0.15s; }
@@ -61,18 +65,36 @@
     .pill { font-size: 0.6875rem; padding: 3px 10px; background: var(--gray-100); color: var(--gray-700); border-radius: 10px; }
     .case-arrow { font-size: 1.25rem; color: var(--gray-500); align-self: center; }
 
-    .about { padding: 4rem 0; border-top: 1px solid var(--gray-200); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-    .about-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 1rem; }
-    .about-text { font-size: 0.9375rem; color: var(--gray-700); line-height: 1.75; }
+    /* ABOUT BLOCK */
+    .about-block {
+      margin: 1px 0 0;
+      background: var(--black);
+      color: var(--white);
+      padding: 4rem 0;
+    }
+    .about-block .container { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: start; }
+    .about-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .about-label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 1rem; }
+    .about-text { font-size: 0.9375rem; color: rgba(255,255,255,0.75); line-height: 1.75; }
 
-    .contact-section { padding: 4rem 0; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
-    .contact-text { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.1; color: var(--black); }
-    .contact-links { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
-    .contact-link { font-size: 0.875rem; color: var(--gray-700); border-bottom: 1px solid var(--gray-200); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-    .contact-link:hover { color: var(--black); border-color: var(--black); }
+    /* CONTACT BLOCK */
+    .contact-block {
+      background: var(--gray-100);
+      padding: 4rem 0;
+      border-top: 1px solid var(--gray-200);
+    }
+    .contact-block .container { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
+    .contact-headline { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.1; color: var(--black); }
+    .contact-channels { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+    .contact-channel { display: flex; align-items: center; gap: 10px; }
+    .contact-channel-label { font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); width: 60px; text-align: right; }
+    .contact-channel-link { font-size: 0.9375rem; color: var(--black); border-bottom: 1px solid var(--gray-200); padding-bottom: 2px; transition: border-color 0.2s; }
+    .contact-channel-link:hover { border-color: var(--black); }
 
+    /* CASE PAGE */
     .case-page { padding: 4rem 0 6rem; }
-    .case-page-back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 3rem; cursor: pointer; transition: color 0.2s; }
+    .case-page-back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 3rem; cursor: pointer; transition: color 0.2s; background: none; border: none; font-family: var(--sans); padding: 0; }
     .case-page-back:hover { color: var(--black); }
     .case-page-back::before { content: '←'; }
     .case-page-header { border-bottom: 1px solid var(--gray-200); padding-bottom: 3rem; margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 260px; gap: 3rem; align-items: start; }
@@ -88,7 +110,8 @@
     .case-body-text { font-size: 1rem; color: var(--gray-700); line-height: 1.8; max-width: 680px; }
     .case-body-text p + p { margin-top: 1rem; }
     .case-images { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-    .case-images img { width: 100%; height: 300px; object-fit: cover; background: var(--gray-100); display: block; }
+    .case-images img { width: 100%; height: 320px; object-fit: cover; object-position: center top; background: var(--gray-100); display: block; }
+    .case-images img.portrait { object-position: center 20%; }
     .case-links { display: flex; flex-direction: column; gap: 8px; }
     .case-link-item { display: flex; align-items: center; gap: 12px; padding: 1rem 1.25rem; border: 1px solid var(--gray-200); transition: border-color 0.2s, background 0.2s; }
     .case-link-item:hover { border-color: var(--black); background: var(--gray-100); }
@@ -110,9 +133,12 @@
       .hero { padding: 3rem 0 2.5rem; }
       .case-row { grid-template-columns: 1fr; gap: 0.75rem; }
       .case-arrow { display: none; }
-      .about { grid-template-columns: 1fr; gap: 2.5rem; }
-      .contact-section { flex-direction: column; align-items: flex-start; }
-      .contact-links { align-items: flex-start; }
+      .about-block .container { grid-template-columns: 1fr; gap: 2rem; }
+      .about-content { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-block .container { flex-direction: column; align-items: flex-start; }
+      .contact-channels { align-items: flex-start; }
+      .contact-channel { flex-direction: row-reverse; }
+      .contact-channel-label { text-align: left; }
       .case-page-header { grid-template-columns: 1fr; }
     }
   </style>
@@ -124,15 +150,15 @@
       <div class="nav-inner">
         <span class="nav-name" onclick="showPage('home')">Geovana Pereira</span>
         <ul class="nav-links">
-          <li><a href="#" onclick="showPage('home');scrollTo('work-anchor');return false;">Work</a></li>
-          <li><a href="#" onclick="showPage('home');scrollTo('about-anchor');return false;">About</a></li>
-          <li><a href="mailto:geovanacomper@gmail.com">Contact</a></li>
+          <li><button onclick="goHome('work-anchor')">Work</button></li>
+          <li><button onclick="goHome('about-anchor')">About</button></li>
+          <li><button onclick="goHome('contact-anchor')">Contact</button></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HOME -->
+  <!-- =================== HOME =================== -->
   <div id="page-home" class="page active">
     <main>
       <div class="container">
@@ -156,6 +182,7 @@
         <p class="section-label" id="work-anchor">Selected work</p>
 
         <div class="cases">
+
           <div class="case-row" onclick="showCase('afropunk')">
             <div class="case-meta">
               <span class="case-num">01</span>
@@ -175,20 +202,35 @@
             <div class="case-meta">
               <span class="case-num">02</span>
               <span class="case-client">Final Level Co</span>
-              <span class="case-type">Content strategy & storymaking</span>
+              <span class="case-type">Content strategy & event coverage</span>
               <span class="case-year">2024–2025</span>
             </div>
             <div class="case-title-col">
-              <h2 class="case-title">Building editorial identity for a media company rooted in youth culture</h2>
-              <p class="case-desc">Led content strategy for Final Level and served as storymaker on Favela Gaming, one of Brazil's most significant grassroots esports projects.</p>
-              <div class="pills"><span class="pill">Editorial strategy</span><span class="pill">Creator economy</span><span class="pill">Esports</span></div>
+              <h2 class="case-title">Building editorial identity for Brazil's leading gaming media company</h2>
+              <p class="case-desc">Content strategy, editorial planning, and on-the-ground coverage at CCXP, Gamescom, Youpix Summit, and Riot Games events. Final Level is Riot's biggest partner in Brazil.</p>
+              <div class="pills"><span class="pill">Editorial strategy</span><span class="pill">Creator economy</span><span class="pill">Events</span><span class="pill">Riot Games</span></div>
+            </div>
+            <span class="case-arrow">→</span>
+          </div>
+
+          <div class="case-row" onclick="showCase('favelagaming')">
+            <div class="case-meta">
+              <span class="case-num">03</span>
+              <span class="case-client">Favela Gaming</span>
+              <span class="case-type">Storymaking & content</span>
+              <span class="case-year">2024–2025</span>
+            </div>
+            <div class="case-title-col">
+              <h2 class="case-title">Telling the story of competitive gaming coming from the favela</h2>
+              <p class="case-desc">Storymaker for one of Brazil's most culturally significant esports initiatives — a Final Level, Gerando Falcões, and YouTube Gaming collaboration.</p>
+              <div class="pills"><span class="pill">Final Level Co</span><span class="pill">Gerando Falcões</span><span class="pill">YouTube Gaming</span><span class="pill">Esports</span></div>
             </div>
             <span class="case-arrow">→</span>
           </div>
 
           <div class="case-row" onclick="showCase('unilever')">
             <div class="case-meta">
-              <span class="case-num">03</span>
+              <span class="case-num">04</span>
               <span class="case-client">Unilever Food Solutions</span>
               <span class="case-type">Journalism & SEO content</span>
               <span class="case-year">2022–2024</span>
@@ -203,7 +245,7 @@
 
           <div class="case-row" onclick="showCase('enterogermina')">
             <div class="case-meta">
-              <span class="case-num">04</span>
+              <span class="case-num">05</span>
               <span class="case-client">Enterogermina (Sanofi)</span>
               <span class="case-type">Creative copywriting & social</span>
               <span class="case-year">2022–2023</span>
@@ -215,9 +257,31 @@
             </div>
             <span class="case-arrow">→</span>
           </div>
-        </div>
 
-        <section class="about" id="about-anchor">
+          <div class="case-row" onclick="showCase('taofeminino')">
+            <div class="case-meta">
+              <span class="case-num">06</span>
+              <span class="case-client">Taofeminino</span>
+              <span class="case-type">Journalism & SEO</span>
+              <span class="case-year">2016–2017</span>
+            </div>
+            <div class="case-title-col">
+              <h2 class="case-title">Viral content for one of Brazil's largest women's digital portals</h2>
+              <p class="case-desc">SEO journalism and content production for a global French group. Articles that went viral on Facebook with 1,000+ shares each, covering culture, diversity, and lifestyle.</p>
+              <div class="pills"><span class="pill">Aufeminin Group</span><span class="pill">SEO</span><span class="pill">Journalism</span><span class="pill">Viral content</span></div>
+            </div>
+            <span class="case-arrow">→</span>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- ABOUT -->
+    <div id="about-anchor" class="about-block">
+      <div class="container">
+        <img class="about-photo" src="geo-photo.png" alt="Geovana Pereira" />
+        <div class="about-content">
           <div>
             <p class="about-label">Background</p>
             <p class="about-text">Degree in Portuguese & German from USP. Postgraduate in Media, Information and Culture (ECA-USP). 8+ years across journalism, brand publishing, social media strategy, and editorial content for agencies, startups, and global brands.</p>
@@ -226,24 +290,38 @@
             <p class="about-label">What I bring</p>
             <p class="about-text">I understand how language works on the internet — how it shifts between platforms, what resonates with young audiences, and how to build editorial systems that scale. Available for freelance and contractor projects in content strategy, copywriting, and editorial consulting.</p>
           </div>
-        </section>
-
-        <section class="contact-section">
-          <p class="contact-text">Let's work<br>together</p>
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:geovanacomper@gmail.com">geovanacomper@gmail.com</a>
-            <a class="contact-link" href="https://linkedin.com/in/geovana-c-pereira" target="_blank">linkedin.com/in/geovana-c-pereira</a>
-          </div>
-        </section>
+        </div>
       </div>
-    </main>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact-anchor" class="contact-block">
+      <div class="container">
+        <p class="contact-headline">Let's work<br>together</p>
+        <div class="contact-channels">
+          <div class="contact-channel">
+            <span class="contact-channel-label">Email</span>
+            <a class="contact-channel-link" href="mailto:geovanacomper@gmail.com">geovanacomper@gmail.com</a>
+          </div>
+          <div class="contact-channel">
+            <span class="contact-channel-label">LinkedIn</span>
+            <a class="contact-channel-link" href="https://linkedin.com/in/geovana-c-pereira" target="_blank">linkedin.com/in/geovana-c-pereira</a>
+          </div>
+          <div class="contact-channel">
+            <span class="contact-channel-label">Instagram</span>
+            <a class="contact-channel-link" href="https://instagram.com/compergeo" target="_blank">@compergeo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- CASE: AFROPUNK -->
+  <!-- =================== CASE: AFROPUNK =================== -->
   <div id="page-afropunk" class="page">
     <div class="container">
       <div class="case-page">
-        <span class="case-page-back" onclick="showPage('home')">Back to work</span>
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
         <div class="case-page-header">
           <div>
             <p class="case-page-eyebrow">01 — Content strategy & live coverage</p>
@@ -261,7 +339,7 @@
             <p class="case-section-title">The work</p>
             <div class="case-body-text">
               <p>AFROPUNK is a global platform for Black culture, expression, and community. In 2024, it expanded across Brazil for the first time and I was invited to contribute with content strategy and copywriting for the São Paulo Experience edition.</p>
-              <p>I worked on editorial planning and live coverage for social media, crafting texts and videos that captured the spirit of the festival: powerful, political, and deeply human. Working closely with key sponsors — Banco do Brasil, Heineken, Coca-Cola, Red Bull, White Horse, Club Social, and Avatim — I helped align brand narratives with the soul of the event.</p>
+              <p>I worked on editorial planning and live coverage for social media, crafting texts and videos that captured the spirit of the festival: powerful, political, and deeply human. Working closely with key sponsors — Banco do Brasil, Heineken, Coca-Cola, Red Bull, White Horse, Club Social, and Avatim — I helped align brand narratives with the soul of the event without compromising its identity.</p>
               <p>AFROPUNK's first-ever edition in the city brought together international sensation Amaarae with national powerhouses like Ludmilla, Anelis Assumpção, DJ Nyack, Rachel Reis, and Yago Oproprio — blending local and global influences into an unforgettable cultural experience.</p>
             </div>
           </div>
@@ -284,43 +362,86 @@
     </div>
   </div>
 
-  <!-- CASE: FINAL LEVEL -->
+  <!-- =================== CASE: FINAL LEVEL =================== -->
   <div id="page-finallevel" class="page">
     <div class="container">
       <div class="case-page">
-        <span class="case-page-back" onclick="showPage('home')">Back to work</span>
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
         <div class="case-page-header">
           <div>
-            <p class="case-page-eyebrow">02 — Content strategy & storymaking</p>
+            <p class="case-page-eyebrow">02 — Content strategy & event coverage</p>
             <h1 class="case-page-title">Final Level Co</h1>
-            <p class="case-page-desc">Led content strategy and editorial planning for Final Level, a Brazilian media company focused on creators and gaming culture. On Favela Gaming, served as storymaker for one of the country's most significant grassroots esports projects.</p>
+            <p class="case-page-desc">Content strategy and editorial planning for Final Level, Brazil's leading gaming media company — and Riot Games' biggest partner in the country. On-the-ground coverage at the most important events in Brazilian gaming and creator culture.</p>
           </div>
           <div class="case-page-meta">
             <div class="case-page-meta-item"><span class="case-page-meta-label">Client</span><span class="case-page-meta-value">Final Level Co</span></div>
             <div class="case-page-meta-item"><span class="case-page-meta-label">Year</span><span class="case-page-meta-value">2024–2025</span></div>
-            <div class="case-page-meta-item"><span class="case-page-meta-label">Services</span><span class="case-page-meta-value">Editorial strategy, content planning, social media, storymaking</span></div>
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Services</span><span class="case-page-meta-value">Editorial strategy, content planning, event coverage, social media</span></div>
           </div>
         </div>
         <div class="case-page-body">
           <div>
             <p class="case-section-title">The work</p>
             <div class="case-body-text">
-              <p>Final Level Co is a Brazilian media company at the intersection of gaming, creator culture, and youth identity. As Content Strategist, I led editorial planning and content strategy for the brand and its creator community.</p>
-              <p>On Favela Gaming — one of Brazil's most culturally significant grassroots esports initiatives — I served as storymaker, responsible for capturing and communicating the narrative behind the project: teams, players, community, and the broader cultural weight of competitive gaming coming from the favela.</p>
-              <p>In 6 months, the brand grew its Instagram following by 25% with just 10 posts per month — proof that focused editorial strategy consistently outperforms volume.</p>
+              <p>Final Level Co is a Brazilian media company at the intersection of gaming, creator culture, and youth identity — and Riot Games' biggest partner in Brazil. As Content Strategist, I led editorial planning and content strategy for the brand and its creator community.</p>
+              <p>A major part of the role was planning and executing content coverage at the most relevant events in the Brazilian gaming and culture calendar: CCXP, Gamescom, Youpix Summit, and proprietary Riot Games events. This meant building editorial frameworks before each event, managing live content production on the ground, and shaping the narrative around Final Level's presence in these spaces.</p>
+              <p>At Riot Games events, I was embedded in the brand's universe — including the CCXP activation themed around Arcane: League of Legends, where I covered the writers, composers, and voice actors behind the series that inspired my own postgraduate research.</p>
             </div>
           </div>
           <div>
             <p class="case-section-title">Images</p>
             <div class="case-images">
+              <img src="ritoverso-209.jpg" alt="Geovana at Riot Games event" class="portrait" />
               <img src="https://c-p.rmcdn1.net/60d109e8c6c82000749e7b83/5490233/image-a69199fc-fd37-499d-ac1c-2e672065f471.png" alt="Final Level Co" />
-              <img src="https://c-p.rmcdn1.net/60d109e8c6c82000749e7b83/5490233/image-1a2d6245-4e58-426f-8a24-5ebc6a679fd6.jpg" alt="Favela Gaming" />
             </div>
           </div>
           <div>
             <p class="case-section-title">Links</p>
             <div class="case-links">
               <a class="case-link-item" href="https://www.instagram.com/finallevelco" target="_blank"><span class="case-link-label">Final Level Co — Instagram</span><span class="case-link-arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== CASE: FAVELA GAMING =================== -->
+  <div id="page-favelagaming" class="page">
+    <div class="container">
+      <div class="case-page">
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
+        <div class="case-page-header">
+          <div>
+            <p class="case-page-eyebrow">03 — Storymaking & content</p>
+            <h1 class="case-page-title">Favela Gaming</h1>
+            <p class="case-page-desc">Storymaker for one of Brazil's most culturally significant esports projects — a collaboration between Final Level Co, Gerando Falcões, and YouTube Gaming that brings competitive gaming to communities on the periphery.</p>
+          </div>
+          <div class="case-page-meta">
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Partners</span><span class="case-page-meta-value">Final Level Co, Gerando Falcões, YouTube Gaming</span></div>
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Year</span><span class="case-page-meta-value">2024–2025</span></div>
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Services</span><span class="case-page-meta-value">Storymaking, content production, event coverage, social media</span></div>
+          </div>
+        </div>
+        <div class="case-page-body">
+          <div>
+            <p class="case-section-title">The work</p>
+            <div class="case-body-text">
+              <p>Favela Gaming is a project born from the belief that competitive gaming belongs to everyone. A collaboration between Final Level Co, Gerando Falcões — Brazil's largest social impact organization — and YouTube Gaming, it creates pathways for young people from the periphery to enter the esports ecosystem.</p>
+              <p>As storymaker, I was responsible for capturing and communicating the human narrative behind the project: the players, their communities, the weight of what it means to compete at a high level when the system wasn't built for you. The work demanded both journalistic precision and genuine cultural sensitivity.</p>
+              <p>Coverage included live events, player interviews, and behind-the-scenes content that translated the spirit of Favela Gaming to broader audiences — without flattening or exoticizing the communities at its center.</p>
+            </div>
+          </div>
+          <div>
+            <p class="case-section-title">Images</p>
+            <div class="case-images">
+              <img src="FavelaGamingGamescom-321.jpg" alt="Favela Gaming at Gamescom" />
+              <img src="FavelaGamingGamescom-214.jpg" alt="Favela Gaming at Gamescom" />
+            </div>
+          </div>
+          <div>
+            <p class="case-section-title">Links</p>
+            <div class="case-links">
               <a class="case-link-item" href="https://www.instagram.com/favelagaming" target="_blank"><span class="case-link-label">Favela Gaming — Instagram</span><span class="case-link-arrow">↗</span></a>
             </div>
           </div>
@@ -329,14 +450,14 @@
     </div>
   </div>
 
-  <!-- CASE: UNILEVER -->
+  <!-- =================== CASE: UNILEVER =================== -->
   <div id="page-unilever" class="page">
     <div class="container">
       <div class="case-page">
-        <span class="case-page-back" onclick="showPage('home')">Back to work</span>
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
         <div class="case-page-header">
           <div>
-            <p class="case-page-eyebrow">03 — Journalism & SEO content</p>
+            <p class="case-page-eyebrow">04 — Journalism & SEO content</p>
             <h1 class="case-page-title">Unilever Food Solutions</h1>
             <p class="case-page-desc">Educational and inspirational content for food service professionals — chefs, restaurant owners, operators. Developed the Future Menus 2024 Brazil edition and built a consistent SEO strategy around gastronomy, nutrition, and culinary technique.</p>
           </div>
@@ -351,14 +472,14 @@
             <p class="case-section-title">The work</p>
             <div class="case-body-text">
               <p>Unilever Food Solutions is the B2B unit of Unilever, serving the food service sector with brands like Hellmann's, Knorr Professional, Maizena, and Arisco. The audience is highly specialized — professional chefs and restaurant operators — which required both technical accuracy and genuine culinary passion in every piece.</p>
-              <p>I developed educational articles with strong SEO strategy, covering topics from mise en place to sous chef roles, Brazilian gastronomy, and seasonal cooking. I also contributed to the Future Menus 2024 Brazil edition — a flagship publication featuring an interview with chef Thaís Gimenez on seasonality in Brazilian cuisine.</p>
+              <p>I developed educational articles with strong SEO strategy, covering topics from mise en place to sous chef roles, Brazilian gastronomy, and seasonal cooking. I also contributed to the Future Menus 2024 Brazil edition — a flagship annual publication featuring an interview with chef Thaís Gimenez on seasonality in Brazilian cuisine, with my byline on page 30.</p>
             </div>
           </div>
           <div>
             <p class="case-section-title">Images</p>
             <div class="case-images">
-              <img src="https://c-p.rmcdn1.net/60d109e8c6c82000749e7b83/5490233/image-8e5d4b67-20c7-48f3-ab39-14627c6d66bb.png" alt="Future Menus 2024" />
-              <img src="https://c-p.rmcdn1.net/60d109e8c6c82000749e7b83/5490233/image-d633050b-d674-4a0a-9938-872329f12055.png" alt="Unilever Food Solutions" />
+              <img src="unilever-1.png" alt="Future Menus 2024 Brazil cover" />
+              <img src="unilever-2.png" alt="Future Menus 2024 article by Geovana Pereira" />
             </div>
           </div>
           <div>
@@ -375,14 +496,14 @@
     </div>
   </div>
 
-  <!-- CASE: ENTEROGERMINA -->
+  <!-- =================== CASE: ENTEROGERMINA =================== -->
   <div id="page-enterogermina" class="page">
     <div class="container">
       <div class="case-page">
-        <span class="case-page-back" onclick="showPage('home')">Back to work</span>
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
         <div class="case-page-header">
           <div>
-            <p class="case-page-eyebrow">04 — Creative copywriting & social content</p>
+            <p class="case-page-eyebrow">05 — Creative copywriting & social content</p>
             <h1 class="case-page-title">Enterogermina (Sanofi)</h1>
             <p class="case-page-desc">Developed creative and educational social media content for a healthcare brand that needed to be both medically accurate and genuinely fun. Tied seasonal cultural moments — like Rock in Rio — to product messaging in a way that felt organic, not forced.</p>
           </div>
@@ -402,17 +523,52 @@
             </div>
           </div>
           <div>
-            <p class="case-section-title">Images</p>
-            <div class="case-images">
-              <img src="https://c-p.rmcdn1.net/60d109e8c6c82000749e7b83/5490233/image-0ba2f6cc-8cc0-4027-9b9d-67b6df69e98d.png" alt="Enterogermina social content" />
+            <p class="case-section-title">Content</p>
+            <div class="case-links">
+              <a class="case-link-item" href="https://www.instagram.com/p/ClqvieAOs0W/?igsh=azg0cW9lb2JxYjR4" target="_blank"><span class="case-link-label">Instagram — Rock in Rio post</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://vimeo.com/762490637" target="_blank"><span class="case-link-label">Rock in Rio reel</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://vimeo.com/762496181" target="_blank"><span class="case-link-label">Spring reel</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://vimeo.com/762499621" target="_blank"><span class="case-link-label">Content reel 3</span><span class="case-link-arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== CASE: TAOFEMININO =================== -->
+  <div id="page-taofeminino" class="page">
+    <div class="container">
+      <div class="case-page">
+        <button class="case-page-back" onclick="showPage('home')">Back to work</button>
+        <div class="case-page-header">
+          <div>
+            <p class="case-page-eyebrow">06 — Journalism & SEO</p>
+            <h1 class="case-page-title">Taofeminino</h1>
+            <p class="case-page-desc">SEO journalism and content production for one of Brazil's largest women's digital portals, part of the French group Aufeminin — present in Germany, the UK, the US, Vietnam, and beyond. Articles that went viral on Facebook with over 1,000 shares each.</p>
+          </div>
+          <div class="case-page-meta">
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Client</span><span class="case-page-meta-value">Taofeminino / Aufeminin Group</span></div>
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Year</span><span class="case-page-meta-value">2016–2017</span></div>
+            <div class="case-page-meta-item"><span class="case-page-meta-label">Services</span><span class="case-page-meta-value">SEO journalism, content production, translation (EN/DE)</span></div>
+          </div>
+        </div>
+        <div class="case-page-body">
+          <div>
+            <p class="case-section-title">The work</p>
+            <div class="case-body-text">
+              <p>Taofeminino was a Brazilian portal from the French group Aufeminin, focused on content representing the modern woman. It was my first major digital journalism experience — and where I learned that writing for the internet means understanding how people actually read, search, and share.</p>
+              <p>I produced SEO-driven journalism covering culture, diversity, feminism, and lifestyle. Several articles went viral on Facebook, reaching over 1,000 shares each — including pieces on African names for babies, Black women authors in Brazilian literature, and the internet phenomenon of Thor, the world's most beautiful cat.</p>
+              <p>The work also involved translation from English and German, which fed directly into my linguistic sensibility and my understanding of how tone, register, and cultural context shape the meaning of a text — not just its words.</p>
             </div>
           </div>
           <div>
-            <p class="case-section-title">Videos</p>
+            <p class="case-section-title">Articles</p>
             <div class="case-links">
-              <a class="case-link-item" href="https://vimeo.com/762490637" target="_blank"><span class="case-link-label">Enterogermina — Rock in Rio reel</span><span class="case-link-arrow">↗</span></a>
-              <a class="case-link-item" href="https://vimeo.com/762496181" target="_blank"><span class="case-link-label">Enterogermina — Spring reel</span><span class="case-link-arrow">↗</span></a>
-              <a class="case-link-item" href="https://vimeo.com/762499621" target="_blank"><span class="case-link-label">Enterogermina — Content reel 3</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://www.taofeminino.com.br/filhos/nomes-africanos-para-bebes-s1915765.html" target="_blank"><span class="case-link-label">African names for babies</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://www.taofeminino.com.br/sociedade/autoras-negras-na-literatura-brasileira-s1852713.html" target="_blank"><span class="case-link-label">Black women authors in Brazilian literature</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://www.taofeminino.com.br/bombando-na-internet/conhecam-thor-provavelmente-o-gato-mais-bonito-do-mundo-s1984704.html" target="_blank"><span class="case-link-label">Thor, the world's most beautiful cat</span><span class="case-link-arrow">↗</span></a>
+              <a class="case-link-item" href="https://www.taofeminino.com.br/voce/desafio-das-52-semanas-como-economizar-ate-r-6-890-em-um-ano-s2230698.html" target="_blank"><span class="case-link-label">The 52-week savings challenge</span><span class="case-link-arrow">↗</span></a>
             </div>
           </div>
         </div>
@@ -435,12 +591,17 @@
       document.getElementById('page-' + page).classList.add('active');
       window.scrollTo(0, 0);
     }
-    function showCase(id) { showPage(id); }
-    function scrollTo(id) {
+
+    function showCase(id) {
+      showPage(id);
+    }
+
+    function goHome(anchorId) {
+      showPage('home');
       setTimeout(() => {
-        const el = document.getElementById(id);
+        const el = document.getElementById(anchorId);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
+      }, 60);
     }
   </script>
 
